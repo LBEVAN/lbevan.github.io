@@ -3,13 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdGridListModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdIconModule, MdGridListModule } from '@angular/material';
+
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
+import { PageBaseModule } from './page-base/page-base.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,11 +22,11 @@ import { AppComponent } from './app.component';
     HttpModule,
     BrowserAnimationsModule,
     MdButtonModule,
-    MdMenuModule,
     MdCardModule,
-    MdToolbarModule,
     MdIconModule,
-    MdGridListModule
+    MdGridListModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    PageBaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

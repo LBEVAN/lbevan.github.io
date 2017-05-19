@@ -1,0 +1,9 @@
+.nav-button {
+    position: inline-block;
+    color: white;
+}
+
+.nav-button:hover {
+    color: #2D74B2;
+    background-color: white;
+}
