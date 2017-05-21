@@ -1,0 +1,9 @@
+<md-card class="blog" *ngFor="let blog of blogs | async">
+  <md-card-header class="blog-header">
+    <md-card-title class="blog-title">{{blog.title | uppercase}}</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <br />
+    <p>{{blog.content}}</p>
+  </md-card-content>
+</md-card>

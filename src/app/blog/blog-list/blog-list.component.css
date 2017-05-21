@@ -1,0 +1,15 @@
+.blog {
+    margin-bottom: 5px;
+}
+
+.blog-header {
+    margin: 0px;
+    padding: 0px;
+}
+
+.blog-title {
+    margin: 0px;
+    padding: 0px;
+    color: #125087;
+    font-weight: bold;
+}
