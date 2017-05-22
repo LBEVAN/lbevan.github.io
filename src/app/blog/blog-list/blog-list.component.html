@@ -1,4 +1,4 @@
-<md-card class="blog" *ngFor="let blog of blogs | async">
+<md-card [class.loading]="!(blogs | async)" [class.loaded]="(blogs | async)" class="blog" *ngFor="let blog of blogs | async">
   <md-card-header class="blog-header">
     <md-card-title class="blog-title">{{blog.title | uppercase}}</md-card-title>
   </md-card-header>

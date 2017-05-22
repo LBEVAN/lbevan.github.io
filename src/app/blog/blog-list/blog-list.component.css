@@ -13,3 +13,11 @@
     color: #125087;
     font-weight: bold;
 }
+
+.loading {
+    opacity: 0;
+}
+
+.loaded {
+    transition: .5s ease-in-out all;
+}
