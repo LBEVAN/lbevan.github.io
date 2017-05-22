@@ -20,7 +20,7 @@ export class BlogListComponent implements OnInit {
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
-    this.blogs = this.blogService.getBlogs();
+    this.blogs = this.blogService.getBlogs(this.count);
   }
 
 }

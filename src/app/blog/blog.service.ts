@@ -10,8 +10,12 @@ export class BlogService {
 
   constructor(private database: AngularFireDatabase) { }
 
-  public getBlogs(): Observable<Blog[]> {
-    return this.database.list("/blog");
+  getBlogs(count: number = 10): Observable<Blog[]> {
+    return this.database.list("/blog", {
+      query: {
+        limitToLast: count
+      }
+    });
   }
 
   getBlog(blogId: number) {
