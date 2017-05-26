@@ -21,3 +21,7 @@
 .loaded {
     transition: .5s ease-in-out all;
 }
+
+button {
+    color: #125087;
+}

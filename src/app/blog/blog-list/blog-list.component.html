@@ -6,4 +6,7 @@
     <br />
     <p>{{blog.content}}</p>
   </md-card-content>
+  <md-card-actions>
+    <button md-raised-button [routerLink]="['/blog', blog.$key ]">MORE</button>
+  </md-card-actions>
 </md-card>

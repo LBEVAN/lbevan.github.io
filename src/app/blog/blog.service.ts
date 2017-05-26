@@ -18,7 +18,12 @@ export class BlogService {
     });
   }
 
-  getBlog(blogId: number) {
-    return null;
+  getBlog(id: string): Observable<Blog> {
+    console.log(id);
+    return this.database.object("/blog/" + id);
+  }
+
+  addBlog(blog: Blog) {
+    this.database.list("/blog").push(blog);
   }
 }
