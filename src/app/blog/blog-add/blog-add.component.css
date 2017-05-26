@@ -1,0 +1,24 @@
+.content {
+    width: 55% ;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 2.1em;
+    color: #125087;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    color: #125087;
+}
+
+md-input-container {
+    width: 100%;
+}

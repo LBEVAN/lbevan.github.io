@@ -1,9 +1,15 @@
-<h1>Add a blog post</h1>
+<h2>ADD A BLOG POST</h2>
 
-<input mdInput placeholder="Title" [(ngModel)]="blog.title">
-<br />
-<br />
-<textarea mdInput placeholder="Content" [(ngModel)]="blog.content"></textarea>
-<br />
-<br />
-<button md-button (click)="add()">Click Me</button>
+<div class="content">
+    <form novalidate (ngSubmit)="onAddBlog(addBlogForm)" #addBlogForm="ngForm">
+        <md-input-container>
+            <input mdInput id="title" name="title" placeholder="Title" required ngModel>
+        </md-input-container>
+        <br />
+        <md-input-container>
+            <textarea mdInput id="content" name="content" placeholder="Content" rows="10" required ngModel></textarea>
+        </md-input-container>
+        <br />
+        <button md-raised-button id="btnAdd" type="submit" [disabled]="!addBlogForm.form.valid">ADD</button>
+    </form> 
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { BlogService } from '../blog.service';
 import { Blog } from '../blog';
@@ -10,15 +11,13 @@ import { Blog } from '../blog';
 })
 export class BlogAddComponent implements OnInit {
 
-  blog: Blog = new Blog();
-
   constructor(private blogService: BlogService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  add() {
-    this.blogService.addBlog(this.blog);
+  onAddBlog(form: NgForm) {
+    let blog: Blog = form.value;
+    this.blogService.addBlog(blog);
+    form.resetForm();
   }
-
 }
