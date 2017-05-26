@@ -1,0 +1,9 @@
+<h1>Add a blog post</h1>
+
+<input mdInput placeholder="Title" [(ngModel)]="blog.title">
+<br />
+<br />
+<textarea mdInput placeholder="Content" [(ngModel)]="blog.content"></textarea>
+<br />
+<br />
+<button md-button (click)="add()">Click Me</button>

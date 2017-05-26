@@ -1,4 +1,8 @@
 export class Blog {
 
-    constructor(private id:number, private title:string, private content:string) { }
+    id: number;
+    title: string;
+    content: string;
+
+    constructor() { }
 }
